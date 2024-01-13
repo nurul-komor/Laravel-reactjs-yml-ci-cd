@@ -18,7 +18,9 @@ jobs:
     steps:
     - name: 🚚 Get latest code
       uses: actions/checkout@v3
-
+    - name: Setup Permissions
+      run: |
+        sudo chmod -R u+rw /
     - name: 📂 Sync files
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
